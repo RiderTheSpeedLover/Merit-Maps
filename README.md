@@ -21,32 +21,6 @@ percentile lands you, and compare colleges side by side.
 Everything is self-contained in `index.html` — no build step, no backend, no external data calls
 (fonts load from Google Fonts; remove that <link> if you want zero external requests).
 
-## Deploy to Vercel (free) — pick one
-
-### A. Drag & drop (fastest)
-1. Sign in at https://vercel.com (GitHub / Google / email).
-2. Open https://vercel.com/new → scroll to **"Deploy a template"**… or simply drag this whole folder
-   onto the page. Vercel detects a static site (no framework).
-3. Click **Deploy**. ~20s later you get a live `https://<name>.vercel.app` URL.
-
-### B. Vercel CLI
-```bash
-npm i -g vercel
-cd this-folder
-vercel          # answer prompts; Framework = Other, build command = none, output dir = ./
-vercel --prod   # promote to production
-```
-
-### C. GitHub (best for updates)
-1. Create a repo, add these files, push.
-2. Vercel → **Add New → Project → Import** the repo. Framework preset **Other**. Deploy.
-3. Every `git push` auto-deploys. Add a custom domain under **Settings → Domains**.
-
-No env vars or build command required.
-
-## Updating data later (e.g., Round V or real fees)
-The data lives in a single `window.DB = {...}` line inside `index.html`. Re-generate it from new
-official PDFs and replace that one line. (Ask the source you built this with to regenerate it.)
 
 ## Files
 - `index.html` — the entire app
